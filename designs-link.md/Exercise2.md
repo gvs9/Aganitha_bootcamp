@@ -1,1 +1,0 @@
-https://www.figma.com/file/RhnPKYa3AgR4h4goTeUCYY/GreetingCard?type=design&node-id=0%3A1&mode=design&t=SYW9p5kFXLdXdUYM-1

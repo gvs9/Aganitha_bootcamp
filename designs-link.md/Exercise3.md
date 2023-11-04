@@ -1,1 +1,0 @@
-https://www.figma.com/file/vQy6DxJlg9bPCUQB3oE3Cl/Exercise-3?type=design&node-id=0%3A1&mode=design&t=Khz1ucfTHCggqMvR-1
