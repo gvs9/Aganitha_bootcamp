@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRISET - Indian Railways Institute of Signal Engineering and Telecommunications</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #CCCCCC;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #073302;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        header img {
+            width: 100px; 
+            margin-right: 20px; 
+        }
+
+        .container {
+            width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #073302;
+            padding: 5px;
+            text-align: center;
+        }
+
+        nav button {
+            background-color: #073302;
+            color: white;
+            margin: 5px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        nav button:hover {
+            background-color: #0E6204;
+        }
+
+        nav button:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .left-column {
+            width: 25%;
+            background-color: #073302;
+            color: white;
+            padding: 10px;
+        }
+
+        .left-column h2 {
+            color: #0E6204;
+        }
+
+        .left-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .left-column li {
+            margin: 5px 0;
+        }
+
+        .right-column {
+            width: 75%;
+            padding: 10px;
+            background-color: white;
+        }
+
+        .right-column h3{
+            color: red;
+        }
+
+        .right-column p {
+            line-height: 1.5;
+            color: black;
+        }
+
+        .right-header {
+            background-color: grey;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .right-links {
+            display: flex;
+        }
+
+        .right-links a {
+            margin-right: 20px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+
+footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-top {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-top img {
+            width: 30px; 
+            margin-right: 10px; 
+        }
+
+        .footer-links {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .footer-links a {
+            margin-right: 10px;
+            text-decoration: none;
+        }
+
+        .footer-text {
+            margin-top: 10px;
+        }   
+    
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="iriset.png" alt="Logo">
+        <h1>IRISET - Indian Railways Institute of Signal Engineering and Telecommunications</h1>
+        <nav>
+            <button class="add-to-cart">About Us</button>
+            <button class="add-to-cart">Events</button>
+            <button class="add-to-cart">Courses</button>
+            <button class="add-to-cart">Hostels</button>
+            <button class="add-to-cart">Standardisation of S & T Drawings</button>
+            <button class="add-to-cart">Contact Us</button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <nav class="content">
+            <div class="left-column">
+                <h2>Home</h2>
+                <ul>
+                    <li>Management & Faculty</li>
+                    <li>Departments</li>
+                    <li>Library</li>
+                    <li>Lecture Halls</li>
+                    <li>Reaching IRISET</li>
+                    <li>Immovable Property Returns</li>
+                    <li>Portal Policies</li>
+                </ul>
+                
+            </div>
+            <div class="right-column">
+                <div class="right-header">
+                    <div class="right-links">
+                        <a href="#">Bookmark</a>
+                        <a href="#">Mail this page</a>
+                        <a href="#">Print this page</a>
+                    </div>
+
+                    <h4>Quick Links</h4>
+
+                    
+                    <div class="custom-select" style="width:250px;">
+                      <select>
+                        <option value="0">Select :</option>
+                        <option value="1">About Us</option>
+                        <option value="2">Departments</option>
+                        <option value="3">Immovable Property Rteurns</option>
+                        <option value="4">Lectures Hall</option>
+                        <option value="5">Library</option>
+                        <option value="6">Management & Faculty</option>
+                        <option value="7">Reaching IRISET</option>
+                        <option value="8">Portal Policies</option>
+                       
+                      </select>
+                    </div>  
+                   
+                </div>
+                <h3>
+                    IRISET : S&T Centralized Training Institute</h3>
+                <p>
+                 Setup in 1957 by the Ministry of Railways, Government of India, to cater to the specialized training needs of their staff and officers in the field of Railway Signaling and Telecommunication. The Institute today caters to the needs of the entire Afro-Asian region.
+                </p>
+                <p>
+                    Located in the southern part of India in Secunderabad adjoining the capital city of Hyderabad in Telangana, the Institute is spread over about 28.3 hectares. IRISET provides initial as well as advanced training, theory as well as hands-on, in Railway Signaling and Telecommunications. It caters to the total training requirement of the Officers and the Supervisors of Signal and Telecommunication department of Indian Railways.
+                </p>
+                <p>
+                    IRISET is in the approved list of ESCAP and UNDP. It provides training in Railway Signaling and Telecommunications to private and public sector enterprises as well. It also trains officials of Foreign Railways.
+                </p>
+                <p>
+                    There are four hostels in the campus itself, one for officers and three for supervisors. There are laboratories for all the important areas of Railway Signaling & Telecommunication to provide hands-on training in the Institute. The lecture halls are equipped with modern teaching aids.
+                </p>
+            </div>
+        </nav>
+    </div>
+
+    <footer>
+        
+            <img src="facebook.png" alt="Facebook Logo" width="20">
+            <img src="twitter.png" alt="Twitter Logo" width="20">
+            <img src="youtube.png" alt="YouTube Logo" width="20">
+            <img src="linkedin.png" alt="LinkedIn Logo" width="20">
+            <div class="footer-links">
+                <a href="#">Site Map</a> | 
+                <a href="#">Contact Us</a> | 
+                <a href="#">RTI</a> | 
+                <a href="#">Disclaimer</a> | 
+                <a href="#">Terms & Conditions</a> | 
+                <a href="#">Privacy Policy</a>
+            </div>
+        
+      
+        <div>&copy; 2016 All Rights Reserved.</div>
+        <div>
+            This is the Portal of Indian Railways, developed with an objective to enable a single window access to information and services being provided by the various Indian Railways entities. The content in this Portal is the result of a collaborative effort of various Indian Railways Entities and Departments Maintained by CRIS, Ministry of Railways, Government of India.
+        </div>
+    </footer>
+    
+
+
+</body>
+</html>
+
