@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Form Layout</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .form-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .form-label {
+        flex: 1;
+        padding: 5px;
+        text-align: right;
+      }
+
+      .form-input {
+        flex: 2;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        outline: none;
+      }
+
+      .form-button-group {
+        display: flex;
+        justify-content: center;
+      }
+
+      .form-button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Flexbox Form</h1>
+      <form class="form">
+        <div class="form-group">
+          <label for="name" class="form-label">Name:</label>
+          <input
+            type="text"
+            id="name"
+            class="form-input"
+            placeholder="Your Name"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label">Email:</label>
+          <input
+            type="email"
+            id="email"
+            class="form-input"
+            placeholder="Your Email"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="phone" class="form-label">Phone:</label>
+          <input
+            type="tel"
+            id="phone"
+            class="form-input"
+            placeholder="Your Phone"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="message" class="form-label">Message:</label>
+          <textarea
+            id="message"
+            class="form-input"
+            placeholder="Your Message"
+            rows="4"
+          ></textarea>
+        </div>
+
+        <div class="form-button-group">
+          <button type="submit" class="form-button">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

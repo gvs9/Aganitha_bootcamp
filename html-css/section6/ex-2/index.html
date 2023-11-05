@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Grid</title>
+    <style>
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 10px;
+        }
+
+        
+        .grid-item {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+            background-color: #7b5959;
+        }
+
+        
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">
+            <h2>Item 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, hic.</p>
+        </div>
+        <div class="grid-item">
+            <h2>Item 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, cum.</p>
+        </div>
+        <div class="grid-item">
+            <h2>Item 3</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, animi!</p>
+        </div>
+        <div class="grid-item">
+            <h2>Item 4</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, voluptatibus?</p>
+        </div>
+        <div class="grid-item">
+            <h2>Item 5</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, sequi.</p>
+        </div>
+        <div class="grid-item">
+            <h2>Item 6</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, voluptas!</p>
+        </div>
+        <div class="grid-item">
+            <h2>Item 7</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, sequi?</p>
+        </div>
+        <div class="grid-item">
+            <h2>Item 8</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, culpa?</p>
+        </div>
+        <div class="grid-item">
+            <h2>Item 9</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, atque.</p>
+        </div>
+    </div>
+</body>
+</html>

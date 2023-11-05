@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Grid 2x2 Grid</title>
+    <style>
+      
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+      }
+
+      
+      .grid-item {
+        border: 1px solid #333; 
+        padding: 10px;
+        text-align: center;
+        background-color: #f5f5f5; 
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Grid</h1>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Grid Item 1</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste nam ut voluptatem autem corrupti deleniti!</p>
+      </div>
+      <div class="grid-item">
+        <h2>Grid Item 2</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet commodi expedita, similique placeat dignissimos tempore.
+        </p>
+      </div>
+      <div class="grid-item">
+        <h2>Grid Item 3</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga totam in, repellendus voluptas aperiam veniam?</p>
+      </div>
+      <div class="grid-item">
+        <h2>Grid Item 4</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem vitae illum voluptatibus neque iste ex!</p>
+      </div>
+    </div>
+  </body>
+</html>

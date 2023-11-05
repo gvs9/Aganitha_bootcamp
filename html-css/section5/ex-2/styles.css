@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+  }
+  
+  .column {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #110e0e;
+  }
+  
+  .column1 {
+    flex: 2; 
+    background-color: #ffcc00;
+  }
+  
+  .column2,
+  .column3 {
+    flex: 1; 
+    background-color: #66ccff;
+  }
+  
