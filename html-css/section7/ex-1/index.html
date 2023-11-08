@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -34,9 +34,9 @@
         .menu-links {
             flex: 2;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
-            margin-right: 30px;
+            margin-right: 100px;
         }
 
         .menu-links a {
@@ -59,6 +59,7 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
+            margin-left: 350px;
         }
 
         .search-bar {
@@ -74,6 +75,7 @@
             padding: 5px 5px;
             cursor: pointer;
             transition: background-color 0.3s;
+            border-radius: 5px;
         }
         .add-to-cart:hover {
             background-color: #007b8a;
@@ -227,6 +229,225 @@
         &copy; 2023 E-commerce Store. All rights reserved.
     </footer>
 </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Landing Page</title>
+    <style>
+        /* Base styles */
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            flex: 1;
+            margin-right: 30px;
+        }
+
+        .menu-links {
+            flex: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 100px;
+        }
+
+        .menu-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .menu-links a:hover {
+            color: #00c1e4;
+        }
+
+        .search-cart {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-left: 10px; /* Reduce margin for smaller screens */
+        }
+
+        .search-bar {
+            height: 30px;
+            width: 100%; /* Full width for smaller screens */
+            margin: 0 10px; /* Reduce margin for smaller screens */
+        }
+
+        .add-to-cart {
+            background-color: #00c1e4;
+            color: #fff;
+            border: none;
+            padding: 5px 10px; /* Adjust padding for smaller screens */
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+        }
+
+        .add-to-cart:hover {
+            background-color: #007b8a;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap to the next row on smaller screens */
+        }
+
+        .sidebar {
+            flex: 1;
+            padding: 20px;
+            background-color: #e3e3e3;
+        }
+
+        .filters {
+            margin-bottom: 20px;
+        }
+
+        .filter {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .products {
+            flex: 3;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .product {
+            flex: 1;
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Add margin between products */
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Media queries for responsive design */
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .menu-links {
+                flex: 1;
+                margin-right: 0;
+            }
+
+            .search-cart {
+                margin-left: 0;
+            }
+
+            .search-bar {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Shoe Store</h1>
+            </div>
+
+            <div class="menu-links">
+                <a href="#">Home</a>
+                <a href="#">Products</a>
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">Kids</a>
+            </div>
+            <div class="search-cart">
+                <input type="text" class="search-bar" placeholder="Search Products">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Filters</h2>
+            <div class="filters">
+                <label class="filter">
+                    <input type="checkbox"> Size: Small
+                </label>
+                <label class="filter">
+                    <input type="checkbox"> Size: Medium
+                </label>
+                <label class="filter">
+                    <input type="checkbox"> Size: Large
+                </label>
+                <label class="filter">
+                    <input type="checkbox"> Price: $0 - $50
+                </label>
+                <label class="filter">
+                    <input type="checkbox"> Price: $50 - $100
+                </label>
+                <label class="filter">
+                    <input type="checkbox"> Price: $100+
+                </label>
+            </div>
+        </aside>
+
+        <main class="products">
+            <div class="product">
+                <img src="shoe5.jpg" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>Price: $49.99</p>
+            </div>
+
+            <!-- Add more product items here -->
+
+        </main>
+    </div>
+
+    <footer>
+        &copy; 2023 E-commerce Store. All rights reserved.
+    </footer>
+</body>
 </html>
-
-

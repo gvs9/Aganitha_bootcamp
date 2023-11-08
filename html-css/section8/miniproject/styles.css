@@ -1,0 +1,656 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-image: url(lily-banse--YHSwy6uqvk-unsplash.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  text-align: center;
+  color: white;
+  padding: 150px 0;
+  position: relative;
+  margin: 0;
+  opacity: 1;
+}
+
+.navbar {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+
+  align-items: center;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.navbar h1 {
+  margin-left: 0;
+  color: white;
+  font-size: 36px;
+  margin-left: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-left: auto;
+}
+
+.nav-links li {
+  margin-right: 30px;
+}
+
+.nav-links li:last-child {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+
+  transition: color 0.3s;
+  font-size: 15px;
+}
+
+.nav-links a:hover {
+  color: orange;
+}
+
+.hero-text {
+  margin: 0;
+  font-size: 72px;
+  margin-top: 30px;
+  padding: 30px;
+}
+
+.cta-button {
+  background-color: orange;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-top: 30px;
+}
+
+.cta-button:hover {
+  background-color: #7c5206;
+  transform: scale(1.5);
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: orange;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 20px;
+  flex-direction: row;
+  text-align: center;
+}
+
+.about-text {
+  flex: 1;
+  padding: 20px;
+  width: 70%;
+  text-align: left;
+  justify-content: center;
+  margin-left: 90px;
+}
+
+.about-heading {
+  font-size: 24px;
+  margin-left: 10px;
+  align-items: right;
+}
+
+/* .about-line {
+    width: 50px;
+    border-bottom: 2px solid orange;
+    margin-left:0px ;
+    text-align: center;
+} */
+
+.about-paragraph {
+  font-size: 16px;
+  margin: 20px 0;
+  align-items: right;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  align-items: left;
+}
+
+.large-image {
+  flex: 0.6;
+  border: 2px solid #1b1a1a;
+  width: 500px;
+  height: 615px;
+  margin-left: 40px;
+  border-radius: 10px;
+}
+.small-images {
+  flex: 0.4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.small-image {
+  margin-bottom: 10px;
+  border: 2px solid #1b1a1a;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.menu-section {
+  text-align: center;
+  background-color: #d9d9d9;
+
+  padding: 20px;
+}
+
+.menu-heading {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+/* .menu-line {
+    width: 100px;
+    height: 2px;
+    background-color: orange;
+    margin: 0 auto;
+} */
+
+.menu-card {
+  display: inline-block;
+  width: 250px;
+  border: 1px solid black;
+  margin: 10px;
+  background-color: white;
+}
+
+.menu-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.menu-card .rating {
+  color: gold;
+  font-size: 18px;
+}
+
+.menu-card .item-name {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.menu-card .price {
+  font-size: 16px;
+}
+
+.menu-card .description {
+  margin: 10px;
+}
+
+.order-button {
+  background-color: orange;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 10px;
+  transition: background-color 0.3s;
+}
+.order-button:hover {
+  background-color: #7c5206;
+}
+
+.service-section {
+  background-color: white;
+  text-align: center;
+  padding: 40px;
+  margin-top: 20px;
+}
+
+.service-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-heading {
+  font-size: 24px;
+  margin: 0;
+  color: #1b1a1a;
+}
+/* 
+.service-line {
+width: 50px;
+border-bottom: 2px solid orange;
+margin: 10px auto;
+} */
+
+.service-cards {
+  display: flex;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+}
+
+.service-card {
+  width: calc(33.33% - 20px);
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.service-card img {
+  width: 50px;
+  height: 50px;
+}
+
+.service-description {
+  font-size: 14px;
+  padding: 10px;
+}
+
+.testimonial-section {
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.testimonial-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.testimonial-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+
+.testimonial-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: black;
+  padding: 40px 0;
+}
+
+.testimonial-heading {
+  font-size: 28px;
+  color: white;
+}
+
+.testimonial-line {
+  width: 50px;
+  height: 2px;
+  background-color: white;
+  margin: 10px auto;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial-card {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  height: 350px;
+  margin: 20px;
+  text-align: center;
+}
+
+.testimonial-image-container {
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  width: 100px;
+  height: 100px;
+}
+
+.testimonial-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-rating {
+  font-size: 20px;
+  color: orange;
+}
+
+.testimonial-description {
+  font-size: 16px;
+}
+
+ footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+ 
+}
+
+.contact-info {
+  font-size: 16px;
+}
+
+.contact-info a {
+  color: orange;
+  text-decoration: none;
+}
+
+.subscribe-form {
+  background-color: #666;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.subscribe-form input[type="email"] {
+  width: 70%;
+  padding: 10px;
+  border: none;
+  background-color: #777;
+  color: #fff;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.subscribe-form input[type="email"]::placeholder {
+  color: #fff;
+}
+
+.subscribe-button {
+  background-color: orange;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.subscribe-button:hover {
+  background-color: #ff3a00;
+}
+
+.additional-info {
+  margin-top: 20px;
+}
+
+.additional-info a {
+  color: orange;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.additional-info a:hover {
+  color: #ff3a00;
+} 
+
+/* body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    background-color: #150606;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+}
+
+.footer-links li {
+    margin-right: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9em;
+    
+}
+
+.footer-info h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.social-icons .icon {
+    display: inline-block;
+    margin: 0 10px;
+} */
+
+.scroll-to-top,
+.footer-copyright {
+  text-align: center;
+  display: block;
+  margin: 10px 0;
+  cursor: pointer;
+  font-size: 16px;
+  color: orange;
+}
+.scroll-to-top:hover {
+  text-decoration: underline;
+  color: rgb(129, 86, 6);
+}
+
+
+
+/* CSS for screen sizes up to 480px */
+@media screen and (max-width: 480px) {
+    header {
+      padding: 100px 0;
+      background-position: top;
+    }
+  
+    .navbar h1 {
+      font-size: 24px;
+    }
+  
+    .nav-links {
+      display: none;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-links.active {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      background-color: black;
+      top: 60px;
+      right: 0;
+      width: 100%;
+    }
+  
+    .nav-links.active li {
+      margin-right: 0;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  
+    .about-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-text {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .about-heading {
+      font-size: 18px;
+      margin-left: 0;
+    }
+  
+    .image-container {
+      margin-left: 0;
+      flex-direction: column;
+    }
+  
+    .large-image {
+      width: 100%;
+      height: auto;
+      margin-left: 0;
+    }
+  
+    .small-images {
+      margin-left: 0;
+      flex-direction: row;
+    }
+  
+    .small-image {
+      margin-right: 10px;
+    }
+  
+    .menu-card {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .menu-card .item-name {
+      font-size: 16px;
+    }
+  
+    .service-card {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .service-card img {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .service-description {
+      font-size: 12px;
+    }
+  
+    .testimonial-card {
+      width: 100%;
+      margin: 20px 0;
+    }
+  
+    .testimonial-rating {
+      font-size: 16px;
+    }
+  
+    .testimonial-description {
+      font-size: 14px;
+    }
+  }
+  
+  /* CSS for screen sizes up to 768px */
+  @media screen and (max-width: 768px) {
+    header {
+      padding: 120px 0;
+    }
+  
+    .navbar h1 {
+      font-size: 16px;
+      margin-left: 10px;
+    }
+  .nav-links{
+    margin-right: 10px;
+    font-size: 10px;
+  }
+  .nav-links a{
+    font-size: 12px;
+  }
+    .about-heading {
+      font-size: 20px;
+    }
+  
+    .large-image {
+      width: 80%;
+      height: auto;
+    }
+  
+    .small-image {
+      width: 40%;
+      height: auto;
+    }
+  }
+  
