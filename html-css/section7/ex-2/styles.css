@@ -57,7 +57,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: auto;
+        height: 100%;
     }
     
     .one-btm {
@@ -154,11 +154,11 @@
         background-color: white;
         padding: 10px;
     }
-    .four  {
+    .four h4 {
         color: rgb(182, 0, 0);
         text-decoration: underline;
     }
-    .four  {
+    .four p {
         font-size: 12px;
     }
     
