@@ -1,0 +1,222 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header Styles */
+.header {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+/* Hero Section Styles */
+.hero {
+    background: url('restaurant-bg.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: darkorange;
+}
+
+/* About Us Section Styles */
+.about-us {
+    padding: 50px 20px;
+}
+
+.about-us h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+}
+
+.about-content img {
+    max-width: 100%;
+    margin-right: 20px;
+}
+
+/* Our Menu Section Styles */
+.our-menu {
+    padding: 50px 20px;
+}
+
+.menu-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menu-card {
+    width: 48%;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.menu-card img {
+    max-width: 100%;
+}
+
+.rating {
+    color: orange;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-weight: bold;
+}
+
+/* Our Services Section Styles */
+.our-services {
+    padding: 50px 20px;
+}
+
+.our-services h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.services-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-card {
+    text-align: center;
+}
+
+.service-card img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+/* Testimonials Section Styles */
+.testimonials {
+    padding: 50px 20px;
+}
+
+.testimonials h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.testimonial-card {
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.testimonial-card img {
+    max-width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Footer Section Styles */
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer-right img {
+    max-width: 30px;
+    margin-left: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .menu-card,
+    .service-card,
+    .testimonial-card {
+        width: 100%;
+    }
+}
+/* ... (previous styles) ... */
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .menu-card,
+    .service-card,
+    .testimonial-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav {
+        margin-top: 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .cta-button {
+        font-size: 14px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .menu-card,
+    .service-card,
+    .testimonial-card {
+        width: 100%;
+    }
+}
+
+/* Add more media queries as needed for larger screens */

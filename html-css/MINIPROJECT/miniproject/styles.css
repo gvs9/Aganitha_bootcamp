@@ -1,4 +1,4 @@
-body {
+ body {
   font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
@@ -127,12 +127,12 @@ header {
   align-items: right;
 }
 
-/* .about-line {
+.about-line {
     width: 50px;
     border-bottom: 2px solid orange;
     margin-left:0px ;
     text-align: center;
-} */
+} 
 
 .about-paragraph {
   font-size: 16px;
@@ -653,4 +653,3 @@ footer {
       height: auto;
     }
   }
-  
