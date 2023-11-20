@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Gallery</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+      }
+
+      .gallery-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .photo-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .photo {
+        width: 100%;
+        height: auto;
+        border: 2px solid #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .photo img {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery-container">
+      <h1>Photo Gallery</h1>
+      <div class="photo-gallery">
+        <div class="photo">
+          <img src="gallery1.avif" alt="Photo 1" />
+        </div>
+        <div class="photo">
+          <img src="gallery2.avif" alt="Photo 2" />
+        </div>
+        <div class="photo">
+          <img src="gallery3.avif" alt="Photo 3" />
+        </div>
+        <div class="photo">
+          <img src="gallery4.avif" alt="Photo 4" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1071b2; 
+    color: #fff; 
+    padding: 10px;
+}
+
+.logo {
+    flex: 1; 
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.nav-links {
+    flex: 2; 
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+    color: #fff; 
+}
+
+a:hover {
+    text-decoration: underline;
+}

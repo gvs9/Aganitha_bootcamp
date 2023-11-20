@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blood Donor Registration</title>
+  </head>
+  <body>
+    <h1>Register as a Blood Donor</h1>
+
+    <form action="submit_registration.php" method="post">
+      <fieldset>
+        <legend>Contact Information</legend>
+        <div>
+          <label for="fullName">Full Name:</label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            required
+            aria-label="Full Name"
+          />
+        </div>
+        <div>
+          <label for="email">Email Address:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            aria-label="Email Address"
+          />
+        </div>
+        <div>
+          <label for="phone">Phone Number:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            aria-label="Phone Number"
+          />
+        </div>
+      </fieldset>
+      <p>&nbsp;</p>
+      <fieldset>
+        <legend>Blood Donation Information</legend>
+        <div>
+          <label for="bloodType">Blood Type:</label>
+          <select
+            id="bloodType"
+            name="bloodType"
+            required
+            aria-label="Blood Type"
+          >
+            <option value="" disabled selected>Select Blood Type</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+          </select>
+        </div>
+        <div>
+          <label for="lastDonation">Last Donation Date:</label>
+          <input
+            type="date"
+            id="lastDonation"
+            name="lastDonation"
+            aria-label="Last Donation Date"
+          />
+        </div>
+        <div>
+          <label for="healthIssues">Any Health Issues:</label>
+          <textarea
+            id="healthIssues"
+            name="healthIssues"
+            aria-label="Any Health Issues"
+          ></textarea>
+        </div>
+      </fieldset>
+
+      <div>
+        <input
+          type="checkbox"
+          id="termsAgree"
+          name="termsAgree"
+          required
+          aria-label="I agree to the terms and conditions"
+        />
+        <label for="termsAgree"
+          >I agree to the
+          <a href="terms.html" aria-label="Terms and Conditions"
+            >terms and conditions</a
+          ></label
+        >
+      </div>
+
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>

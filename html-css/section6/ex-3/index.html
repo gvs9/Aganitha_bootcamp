@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Magazine Layout</title>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+      }
+
+      .grid-item {
+        border: 1px solid #333;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .article-1 {
+        background-color: #ffe1b5;
+      }
+      .article-2 {
+        background-color: #b5e1ff;
+      }
+      .article-3 {
+        background-color: #c9ffc9;
+      }
+
+      .article-content {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item article-1">
+        <h2>Article 1</h2>
+        <img src="bike.jpeg" alt="Image 1" />
+        <p class="article-content">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi tempore
+          fugit atque blanditiis molestiae optio at commodi, assumenda sed quod
+          qui iusto possimus? Tenetur, voluptate.
+        </p>
+      </div>
+      <div class="grid-item article-2">
+        <h2>Article 2</h2>
+        <img src="bike.jpeg" alt="Image 2" />
+        <p class="article-content">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus ea,
+          aliquam minus vel quis doloribus distinctio sit unde necessitatibus a
+          sint maxime incidunt veniam labore non ad perferendis reiciendis
+          soluta!
+        </p>
+      </div>
+      <div class="grid-item article-3">
+        <h2>Article 3</h2>
+        <img src="watch1.jpeg" alt="Image 3" />
+        <p class="article-content">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, vel
+          asperiores nostrum qui earum iste eligendi praesentium facere
+          consequatur nobis dolores eos tempora explicabo beatae error quasi
+          numquam odio alias.
+        </p>    
+      </div>
+    </div>
+  </body>
+</html>
