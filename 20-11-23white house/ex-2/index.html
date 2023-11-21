@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>white house</title>
+    <style>
+        * {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 200vh;
+    background-color: white;
+    color: #122c5d;
+}
+
+.max-width {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+.header{
+    display:  flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+    position: relative;
+    padding: 0 16px 0 16px;
+    width: 100%;
+    position: fixed;;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 10;
+    box-shadow:  3px -1px 10px black;
+
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    width: 55%;
+}
+.links img {
+    width: 90px;
+    height: 60px;
+    border-radius: 50%;
+     top: 16px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: absolute;
+    
+}
+.links ul {
+    display: flex;
+    align-items: center;
+}
+
+.links ul li {
+    margin-left: 24px;
+    list-style-type: none;
+}
+
+.links ul li a {
+    text-decoration: none;
+    color: #122c5d;
+    padding: 2px;
+    border-bottom: 1px solid #122c5d78;
+}
+
+
+.main-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 96px;
+    height: 70vh;
+}
+
+.main-title h1 {
+    font-size: 48px;
+    width: 55%;
+    margin-bottom: 16px;
+}
+
+.main-title .sub-title {
+    border-top: 1px solid #00000080;
+    border-bottom: 1px solid #00000080;
+    padding: 5px 0 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-title a {
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin: 8px;
+}
+.sub-title img {
+    width: 32px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+.main-end {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-end h2 {
+    font-size: 20px;
+    margin-top: 64px;
+    width: 60%;
+    line-height: 32px;
+}
+
+.main-section {
+    max-width: 800px;
+    margin: 0 auto;
+    height: 40vh;
+}
+
+.main-section h4 {
+    margin-bottom: 32px;
+}
+
+.main-section p {
+    font-size: 20px;
+    padding: 16px 0;
+}
+
+
+
+.second-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.second-page .blue-box {
+    background-color: #0064bc;
+    padding: 32px;
+    border-radius: 16px;
+    height: 320px;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+.blue-box h2 {
+    width: 65%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.blue-box p {
+    margin-top: 16px;
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+.blue-box h5 {
+    border-bottom: 1px solid #FFFFFF80;
+}
+
+.second-page .blue-border-box {
+    border: 4px solid #122c5d;
+    border-radius: 16px;
+    padding: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.blue-border-box h1 {
+    width: 10%;
+    font-size: 32px;
+    letter-spacing: 12px;
+    color: #122c5d;
+}
+
+#blue-img {
+    width: 48px;
+    height: 32px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.next {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+.next h3 {
+    margin-left: 32px;
+    color: #122c5db9;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.form-ctn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 32px;
+}
+
+.form-ctn label {
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+.form-ctn input {
+    height: 48px;
+    border-radius: 10px;
+    border: none;
+    padding-left: 16px;
+    background-color: #c7d5ed;
+}
+.form-ctn .email {
+    width: 320px;
+}
+.form-ctn .zip-code {
+    width: 128px;
+}
+
+form button {
+    height: 48px;
+    border-radius: 48px;
+    color: white;
+    font-size: 12px;
+    width: 160px;
+    background-color: #122c5d;
+    border: none;
+    margin-left: 16px;
+}
+
+
+
+footer {
+    height: 50vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: #122c5d;
+    margin-top: 5rem;
+}
+
+.footer-left {
+    display: flex;
+    gap: 48px;
+}
+
+.footer-one {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+}
+.footer-one a {
+    text-decoration: none;
+    color: #122c5d;
+    border-bottom: 1px solid #122c5d;
+}
+
+.footer-two {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+}
+.footer-two a {
+    text-decoration: none;
+    color: #122c5d;
+    border-bottom: 1px solid #122c5d;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: flex-end;
+    gap: 48px;
+}
+.footer-three {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+}
+.footer-three a {
+    font-size: 10px;
+    text-decoration: none;
+    color: #122c5d;
+}
+
+.footer-four {
+    width: 35%;
+}
+.footer-four-para {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+}
+.footer-four-para p{
+    width: 70%;
+}
+
+.footer-four h2 {
+    color:goldenrod;
+}
+
+.icons {
+    color: #122c5d;
+    font-size: 25px;
+    margin-bottom: 32px;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    body {
+        height: 200vh;
+        background-color: white;
+    
+        margin: 0 auto;
+        color: #122c5d;
+    }
+
+    .header {
+        padding: 16px;
+    }
+
+    .links a {
+        font-size: 11px;
+    }
+
+    .main-section {
+        padding: 16px;
+    }
+    .second-page {
+        padding: 16px;
+    }
+    .main-title {
+        margin-top: 48px;
+    }
+    .main-title h1 {
+        font-size: 48px;
+        width: 80%;
+    }
+
+    .sub-title a {
+        font-size: 8px;
+        margin: 1px;
+        letter-spacing: 1px;
+    }
+    .sub-title img {
+        width: 16px;
+        height: 8px;
+    }
+
+    .main-bottom h2 {
+        font-size: 13px;
+        margin-top: 64px;
+        width: 60%;
+        line-height: 16px;
+    }
+
+    .main-section p {
+        font-size: 16px;
+    }
+
+    .blue-box h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .blue-box p {
+        margin-top: 16px;
+        margin-bottom: 32px;
+        font-size: 10px;
+    }
+
+    .second-page {
+        height: 80vh;
+    }
+
+    .second-page .blue-border-box {
+        border: 4px solid #122c5d;
+        border-radius: 6px;
+        padding: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .blue-border-box h1 {
+        width: 40%;
+        font-size: 32px;
+        letter-spacing: 13px;
+        color: #122c5d;
+    }
+
+    form {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        gap: 16px;
+        flex-direction: row;
+    }
+
+    .form-ctn .email {
+        width: 240px;
+    }
+
+
+    
+    footer {
+        padding-top: 160px;
+        height: 70vh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        color: #122c5d;
+        flex-wrap: wrap;
+    }
+
+    .footer-three {
+        margin-left: 16px;
+    }
+
+    .links img {
+        position: absolute;
+        top: 16px;
+        right: 2%;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+
+    body {
+        height: 200vh;
+        background-color: white;
+        margin: 0 auto;
+        color: #122c5d;
+    }
+
+    .header {
+        padding: 16px;
+    }
+
+    .links a {
+        font-size: 8px;
+    }
+
+    .links ul li {
+        margin-left: 10px;
+    }
+
+    .main-section {
+        padding: 16px;
+    }
+    .second-page {
+        padding: 16px;
+    }
+    .main-title {
+        margin-top: 96px;
+    }
+    .main-title h1 {
+        font-size: 48px;
+        width: 80%;
+    }
+
+    .sub-title a {
+        font-size: 8px;
+        margin: 1px;
+        letter-spacing: 1px;
+    }
+    .sub-title img {
+        width: 16px;
+        height: 8px;
+    }
+
+    .main-bottom h2 {
+        font-size: 13px;
+        margin-top: 64px;
+        width: 60%;
+        line-height: 16px;
+    }
+
+    .main-section p {
+        font-size: 16px;
+    }
+
+    .blue-box h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .blue-box p {
+        margin-top: 16px;
+        margin-bottom: 32px;
+        font-size: 10px;
+    }
+
+    .second-page {
+        height: 100vh;
+    }
+
+    .second-page .blue-border-box {
+        border: 4px solid #122c5d;
+        border-radius: 16px;
+        padding: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .blue-border-box h1 {
+        width: 40%;
+        font-size: 32px;
+        letter-spacing: 13px;
+        color: #122c5d;
+    }
+
+    form {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        gap: 16px;
+        flex-direction: column;
+    }
+
+    .form-ctn {
+        margin: 0;
+    }
+    .form-ctn .email {
+        width: 240px;
+    }
+    .form-ctn .zip-code {
+        width: 240px;
+    }
+    form button {
+        margin: 0;
+    }
+
+    
+    footer {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        color: #122c5d;
+        flex-wrap: wrap;
+    }
+
+    .footer-right {
+        justify-content: center;
+    }
+
+    .footer-three{
+        margin-left: 16px;
+    }
+
+    .links img {
+        position: absolute;
+        top: 16px;
+        right: 2%;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+
+    body {
+        height: 200vh;
+        background-color: white;
+        margin: 0 auto;
+        color: #122c5d;
+    }
+
+    .header {
+        padding: 16px;
+    }
+
+    .links a {
+        display: none;
+    }
+
+    .main-section {
+        padding: 16px;
+    }
+    .second-page {
+        padding: 16px;
+    }
+    .main-title {
+        margin-top: 96px;
+    }
+    .main-title h1 {
+        font-size: 24px;
+        width: 80%;
+    }
+
+    .sub-title a {
+        font-size: 8px;
+        margin: 1px;
+        letter-spacing: 1px;
+    }
+    .sub-title img {
+        width: 16px;
+        height: 8px;
+    }
+
+    .main-end h2 {
+        font-size: 13px;
+        margin-top: 64px;
+        width: 60%;
+        line-height: 16px;
+    }
+
+    .main-section p {
+        font-size: 13px;
+    }
+
+    .blue-box h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .blue-box p {
+        margin-top: 16px;
+        margin-bottom: 32px;
+        font-size: 10px;
+    }
+
+    .second-page {
+        height: 130vh;
+    }
+
+    .second-page .blue-border-box {
+        border: 4px solid #122c5d;
+        border-radius: 16px;
+        padding: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .blue-border-box h1 {
+        width: 85%;
+        font-size: 32px;
+        letter-spacing: 13px;
+        color: #122c5d;
+        text-align: center;
+    }
+
+    form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 16px;
+        flex-direction: column;
+    }
+
+    .form-ctn .email {
+        width: 192px;
+    }
+    .form-ctn .zip-code {
+        width: 192px;
+    }
+    .form-ctn {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 0;
+    }
+    form button {
+        width: 128px;
+        margin: 0;
+    }
+
+
+    
+    footer {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        color: #122c5d;
+        flex-wrap: wrap;
+    }
+
+    .footer-right {
+        justify-content: center;
+    }
+
+    .footer-three{
+        margin-left: 16px;
+    }
+
+    .links img {
+        position: absolute;
+        top: 16px;
+        right: 2%;
+    }
+}
+    </style>
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav class="header">
+        <div class="nav-title"><b>THE WHITE HOUSE</b></div>
+        <div class="links">
+            <img src="whlogo.png" alt="white-house-img">
+            <ul>
+                <li><a href="#">Administration</a></li>
+                <li><a href="#">Priorities</a></li>
+                <li><a href="#">The Record</a></li>
+                <li><a href="#">Briefing Room</a></li>
+                <li><a href="#">Espanol</a></li>
+            </ul>
+            <div class="menu"></div>
+        </div>
+    </nav>
+ <!-- <div class="date">
+        <p>Out Date: November 20, 2023</p>
+    </div>
+
+    <div class="main-heading">
+        <h2>Remarks  by president biden at the<br>
+             indo pacific Economic Framework<br>
+            San Fransisco,US</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
+             Debitis nihil consequatur repellat neque expedita tempora non rem vel, <br>
+             repudiandae culpa incidunt nemo ipsum eius, magni nobis! Assumenda placeat sint voluptatum.</p>
+    </div> -->
+
+    <section class="main-title max-width">
+        <h5>NOVEMBER 20, 2023</h5>
+        <h1>Remarks by President Biden at the Indo-Pacific Economic Framework | San Francisco, CA</h1>
+        <div class="sub-title">
+            <img src="whlogo.png" alt="white-house-img">
+            <p>></p>
+            <a href="#">BRIEFING ROOM ></a>
+            <a href="#">SPEECHES AND REMARKS ></a>
+        </div>
+        <div class="main-end">
+            <h2>Moscone Convention Center San Francisco, California</h2>
+        </div>
+    </section>
+
+    <section class="main-section max-width">
+        
+        <h4 class="time">6:05 P.M.</h4>
+        <p class="main-section-a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, autem?
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, recusandae?
+        </p>
+        <p class="main-section-b">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae vero quod, dolorem repellat in excepturi saepe. Quam vitae corrupti cupiditate odio ducimus molestiae, aliquid maxime, corporis, accusamus aperiam natus ut.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, officiis?
+        </p>
+    </section>
+
+    <section class="second-page max-width">
+        <div class="blue-box">
+            <h2>Remarks by Vice Presiden Harris at APEC Busines Advisory Council Meeting | San Francisco, CA</h2>
+            <p class="second-page-small-p">NOVEMBOR 20, 2023 - SPEECHES AND REMARKS</p>
+            <h5>Next ></h5>
+        </div>
+        
+        <div class="blue-border-box">
+            
+            <h1>THE <img id="blue-img" src="whlogo.png" alt="white-house"> WHITE HOUSE</h1>
+            <div class="next">
+                <h3>Stay Connected</h3>
+                <form>
+                    <div class="form-ctn">
+                        <label for="email">EMAIL ADDRESS*</label>
+                        <input class="email" type="text" id="email" placeholder="example@example.com">
+                    </div>
+                    <div class="form-ctn">
+                        <label for="zip-code">ZIP-CODE</label>
+                        <input class="zip-code" type="text" id="number" placeholder="ZIP-Code">
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </section>
+<!-- 
+    <div class="white-house-container">
+      <img src="white-house-logo.png" alt="The White House Logo" />
+      <br /><br />
+      <input type="text" placeholder="Email Address" />
+      <input type="text" placeholder="Zip Code" />
+      <br /><br />
+      <button>Sign Up</button>
+    </div> -->
+    <footer class="max-width">
+        <div class="footer-left">
+            <div class="footer-one">
+                <a href="#">Home</a><a href="#">The Administration</a><a href="#">Executive Offices</a><a href="#">Priorities</a><a href="#">The Record</a>
+            </div>
+            <div class="footer-two">
+                <a href="#">Briefing Room</a><a href="#">The White House</a><a href="#">Disclosures</a><a href="#">Get Involved</a><a href="#">Expanol</a>
+            </div>
+        </div>
+        <div class="footer-right">
+            <div class="footer-three">
+                <a href="#">Contact Us</a><a href="#">Privacy Policy</a><a href="#">Copyright Policy</a><a href="#">Accessability Statement</a>
+            </div>
+            <div class="footer-four">
+                
+                <div class="icons">
+                    <i class='bx bxl-instagram'></i>
+                    <i class='bx bxl-facebook' ></i>
+                    <i class='bx bxl-twitter' ></i>
+                    <i class='bx bxl-youtube' ></i>
+                </div>
+                <div class="footer-four-para">
+                    <b>The White House</b>
+                    <p>1600 Pennsylvania Ave NW Washington, DC 20500</p>
+                </p>
+                <h2>WH.GOV</h2>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
