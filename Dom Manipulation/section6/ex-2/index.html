@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countries Grid Display</title>
+  <style>
+    
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    #countries-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 20px;
+      max-width: 800px;
+      margin: 20px;
+    }
+
+    
+    .country {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 150px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    
+    .country-name {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    
+    .country[data-country="INDIA"] {
+      background-color: #3c3b6e; 
+      color: #fff;
+    }
+
+    .country[data-country="USA"] {
+      background-color: #ff0000; 
+      color: #fff;
+    }
+
+    .country[data-country="CANADA"] {
+      background-color: #003366; 
+      color: #fff;
+    }
+    .country[data-country="UK"] {
+      background-color:#ACC8E5; 
+      color: #fff;
+    }
+    .country[data-country="GERMANY"] {
+      background-color: #112A46; 
+      color: #fff;
+    }
+    .country[data-country="FRANCE"] {
+      background-color: #B084DA; 
+      color: #fff;
+    }
+
+    .country[data-country="ITALY"] {
+      background-color: #81DD5F; 
+      color: #fff;
+    }
+
+    .country[data-country="AUSTRALIA"] {
+      background-color:#D53850 ; 
+      color: #fff;
+    }
+
+    .country[data-country="JAPAN"] {
+      background-color: #D748E4; 
+      color: #fff;
+    }
+
+    .country[data-country="BRAZIL"] {
+      background-color:#6DD51D; 
+      color: #fff;
+    }
+    .country[data-country="CHINA"] {
+      background-color: #E36249; 
+      color: #fff;
+    }
+    .country[data-country="QATAR"] {
+      background-color:#0BE491; 
+      color: #fff;
+    }
+
+
+
+
+    
+  </style>
+</head>
+<body>
+
+
+  <div id="countries-container"></div>
+
+  <script>
+    
+    var countries = ['INDIA','USA', 'CANADA', 'UK', 'GERMANY', 'FRANCE', 'ITALY', 'AUSTRALIA', 'JAPAN', 'BRAZIL', 'CHINA','QATAR'];
+
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      var countriesContainer = document.getElementById('countries-container');
+
+      
+      countries.forEach(function(countryName) {
+        var countryDiv = document.createElement('div');
+        countryDiv.classList.add('country');
+        countryDiv.setAttribute('data-country', countryName); 
+
+    
+        var countryNameDiv = document.createElement('div');
+        countryNameDiv.textContent = countryName;
+        countryNameDiv.classList.add('country-name');
+
+        
+        countryDiv.appendChild(countryNameDiv);
+
+        
+        countriesContainer.appendChild(countryDiv);
+      });
+    });
+  </script>
+
+</body>
+</html>

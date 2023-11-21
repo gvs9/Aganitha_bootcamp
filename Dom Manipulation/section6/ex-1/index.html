@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Grid with Color Coding</title>
+  <style>
+    
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    #number-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+      gap: 5px;
+      max-width: 800px;
+      margin: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    
+    .number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      font-size: 16px;
+      font-weight: bold;
+      border: 1px solid #ccc;
+    }
+
+    
+    .even {
+      background-color: #4caf50; 
+      color: #fff;
+    }
+
+    
+    .odd {
+      background-color: #ffeb3b; 
+    }
+
+    
+    .prime {
+      background-color: #f44336; 
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <div id="number-container"></div>
+
+  <script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      var numberContainer = document.getElementById('number-container');
+
+      
+      for (var i = 100; i <= 1000; i++) {
+        var numberDiv = document.createElement('div');
+        numberDiv.textContent = i;
+        numberDiv.classList.add('number');
+
+        
+        if (i % 2 === 0) {
+          numberDiv.classList.add('even');
+        } else {
+          numberDiv.classList.add('odd');
+        }
+
+        if (isPrime(i)) {
+          numberDiv.classList.add('prime');
+        }
+
+        
+        numberContainer.appendChild(numberDiv);
+      }
+
+      //check prime
+      function isPrime(num) {
+        if (num < 2) return false;
+        for (var i = 2; i <= Math.sqrt(num); i++) {
+          if (num % i === 0) return false;
+        }
+        return true;
+      }
+    });
+  </script>
+
+</body>
+</html>
+
