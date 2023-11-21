@@ -9,12 +9,12 @@ class Chessboard {
 
     initializeChessboard() {
     
-        this.board[1] = Array(8).fill('BP'); 
-        this.board[6] = Array(8).fill('Wp'); 
+        this.board[1] = Array(8).fill('♟'); //BP
+        this.board[6] = Array(8).fill('♙'); //Wp
 
     
-        this.board[0] = ['BR','BK','BM','BZ','BQ','BM','BK','BR']; // Black
-        this.board[7] = ['Wr','Wk','Wm','Wz','Wq','Wm','Wk','Wr']; // White
+     this.board[0] = ['♜', '♞', '♝', '♛', '♚', '♝', '♞', '♜'];  // Black['BR','BK','BM','BZ','BQ','BM','BK','BR'];
+        this.board[7] =  ['♖', '♘', '♗', '♕', '♔', '♗', '♘', '♖']; // White['Wr','Wk','Wm','Wz','Wq','Wm','Wk','Wr'];
     }
 
     printChessboard() {

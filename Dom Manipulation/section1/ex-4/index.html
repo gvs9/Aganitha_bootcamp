@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paragraphs</title>
+</head>
+<body>
+
+  <button id="addParagraphButton" onclick="addParagraph()">Add Paragraph</button>
+
+  <script>
+
+    function addParagraph() {
+      var newParagraph = document.createElement('p');
+      var textNode = document.createTextNode("Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, tempore.");
+
+      newParagraph.appendChild(textNode);
+      document.body.appendChild(newParagraph);
+    }
+  </script>
+
+</body>
+</html>

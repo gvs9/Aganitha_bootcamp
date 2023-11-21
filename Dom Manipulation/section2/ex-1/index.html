@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Over</title>
+  <style>
+
+    p {
+      transition: color 0.5s;
+    }
+
+    
+    p:hover {
+      color: orangered;
+    }
+  </style>
+</head>
+<body>
+
+  <p onmouseover="highlightText(this)" onmouseout="revertText(this)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime laudantium deleniti architecto rerum nemo, expedita debitis omnis nostrum assumenda numquam eveniet, facilis facere eos. Fugiat, consectetur doloremque nobis sunt provident eligendi tempora deserunt consequatur nesciunt aut commodi odio fugit inventore non sint earum! Iste nam magnam corporis, officiis id minima.</p>
+
+  <script>
+    
+    function highlightText(element) {
+      element.style.color = 'blue';
+    }
+
+    function revertText(element) {
+      element.style.color = ''; 
+    }
+  </script>
+
+</body>
+</html>
