@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabbed Content Display</title>
+  <style>
+    .tab {
+      display: none;
+    }
+
+    .active-tab {
+      display: block;
+    }
+
+    .tab-buttons {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tab-buttons">
+    <button onclick="showTab('tab1')">Tab 1</button>
+    <button onclick="showTab('tab2')">Tab 2</button>
+    <button onclick="showTab('tab3')">Tab 3</button>
+  </div>
+
+  <div id="tab1" class="tab active-tab">
+    <h2>Tab 1 </h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo odio mollitia non culpa accusamus! Quia asperiores iusto rem obcaecati ab.</p>
+  </div>
+
+  <div id="tab2" class="tab">
+    <h2>Tab 2 </h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit hic magni quae facere tempore laborum quibusdam dignissimos sit maiores debitis.</p>
+  </div>
+
+  <div id="tab3" class="tab">
+    <h2>Tab 3 </h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ea numquam amet ratione, praesentium at fugit libero ad ex. Dignissimos.</p>
+  </div>
+
+  <script>
+    
+    function showTab(tabId) {
+      
+      var tabs = document.querySelectorAll('.tab');
+      tabs.forEach(function(tab) {
+        tab.classList.remove('active-tab');
+      });
+
+    
+      var activeTab = document.getElementById(tabId);
+      activeTab.classList.add('active-tab');
+    }
+  </script>
+
+</body>
+</html>

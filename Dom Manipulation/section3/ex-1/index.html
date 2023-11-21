@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Text Resizer</title>
+  </head>
+  <body>
+    <label for="fontSizeSlider">Adjust Font Size:</label>
+    <input
+      type="range"
+      id="fontSizeSlider"
+      min="10"
+      max="50"
+      step="1"
+      value="16"
+      oninput="changeFontSize(this.value)"
+    />
+
+    <p id="resizableText">Resizable text.</p>
+
+    <script>
+      function changeFontSize(size) {
+        var resizableText = document.getElementById("resizableText");
+        resizableText.style.fontSize = size + "px";
+      }
+    </script>
+  </body>
+</html>

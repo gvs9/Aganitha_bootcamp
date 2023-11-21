@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Table Modifications</title>
+  <style>
+    
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+
+    button {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <table id="numberTable">
+    <thead>
+      <tr>
+        <th>Number</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>
+          <button onclick="insertRow()">Insert</button>
+          <button onclick="deleteLastRow()">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    function insertRow() {
+      var numberTable = document.getElementById('numberTable');
+      var lastNumber = parseInt(numberTable.rows[numberTable.rows.length - 1].cells[0].textContent);
+      var newRow = numberTable.insertRow();
+      var cell1 = newRow.insertCell(0);
+      var cell2 = newRow.insertCell(1);
+
+      cell1.textContent = lastNumber + 1;
+      cell2.innerHTML = '<button onclick="insertRow()">Insert</button> <button onclick="deleteLastRow()">Delete</button>';
+    }
+
+    function deleteLastRow() {
+      var numberTable = document.getElementById('numberTable');
+      if (numberTable.rows.length > 1) {
+        numberTable.deleteRow(numberTable.rows.length - 1);
+      }
+    }
+  </script>
+
+</body>
+</html>

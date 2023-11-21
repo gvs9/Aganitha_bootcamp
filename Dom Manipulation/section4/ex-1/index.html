@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time List Filter</title>
+  <style>
+    
+    #searchBox {
+      margin-bottom: 10px;
+    }
+
+
+    li {
+      display: block;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <label for="searchBox">Search: </label>
+  <input type="text" id="searchBox" oninput="filterList()" placeholder="Type to filter">
+
+  <ul id="itemList">
+    <li>Java</li>
+    <li>Javascript</li>
+    <li>Html</li>
+    <li>Css</li>
+    <li>React</li>
+    <li>Typescript</li>
+    <li>Python</li>
+    
+  </ul>
+
+  <script>
+    
+    function filterList() {
+      var searchBox = document.getElementById('searchBox');
+      var filter = searchBox.value.toUpperCase();
+      var itemList = document.getElementById('itemList');
+      var items = itemList.getElementsByTagName('li');
+
+      for (var i = 0; i < items.length; i++) {
+        var itemText = items[i].textContent || items[i].innerText;
+
+        
+        if (itemText.toUpperCase().indexOf(filter) > -1) {
+          items[i].style.display = '';
+        } else {
+          items[i].style.display = 'none';
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>

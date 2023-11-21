@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Textarea Character Counter</title>
+  <style>
+    
+    #messageContainer {
+      position: relative;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    #message {
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+      margin-bottom: 30px;
+      margin-top: 20px;
+      
+    }
+
+    #charCount {
+      display: block;
+      margin-top: 5px;
+    }
+
+   
+  </style>
+</head>
+<body>
+
+  <div id="messageContainer">
+    <label for="message">Type  Message:</label>
+    <textarea id="message" oninput="updateCharacterCount()" placeholder="Start typing..."></textarea>
+    
+  </div>
+
+  <p>Character Count: <span id="charCount">0</span></p>
+
+  <script>
+    
+    function updateCharacterCount() {
+      var textarea = document.getElementById('message');
+      var charCountSpan = document.getElementById('charCount');
+      var charCount = textarea.value.length;
+
+      charCountSpan.textContent = charCount;
+
+    
+      var placeholder = document.getElementById('messagePlaceholder');
+      placeholder.style.display = textarea.value.length === 0 ? 'block' : 'none';
+    }
+  </script>
+
+</body>
+</html>

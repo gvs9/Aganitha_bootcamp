@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input Autocomplete</title>
+  <style>
+    
+    .autocomplete-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    
+    .suggestion-list {
+      position: absolute;
+      z-index: 1;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border: 1px solid #ccc;
+      max-height: 150px;
+      overflow-y: auto;
+    }
+
+    .suggestion-list li {
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    .suggestion-list li:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="autocomplete-container">
+    <label for="autocompleteInput">Type something:</label>
+    <input type="text" id="autocompleteInput" oninput="showSuggestions()" autocomplete="off">
+    <ul class="suggestion-list" id="suggestionList"></ul>
+  </div>
+
+  <script>
+    
+    var suggestions = ['Apple', 'Banana', 'Cherry', 'Date', 'Grape', 'Lemon', 'Orange', 'Peach', 'Pear', 'Plum'];
+
+    function showSuggestions() {
+      var input = document.getElementById('autocompleteInput');
+      var suggestionList = document.getElementById('suggestionList');
+      var inputValue = input.value.toLowerCase();
+
+      
+      suggestionList.innerHTML = '';
+
+      
+      var filteredSuggestions = suggestions.filter(function(suggestion) {
+        return suggestion.toLowerCase().includes(inputValue);
+      });
+
+      
+      filteredSuggestions.forEach(function(suggestion) {
+        var li = document.createElement('li');
+        li.textContent = suggestion;
+        li.onclick = function() {
+        
+          input.value = suggestion;
+          
+          suggestionList.innerHTML = '';
+        };
+        suggestionList.appendChild(li);
+      });
+
+      
+      suggestionList.style.display = filteredSuggestions.length > 0 ? 'block' : 'none';
+    }
+
+    
+    document.addEventListener('click', function(event) {
+      var autocompleteContainer = document.querySelector('.autocomplete-container');
+      if (!autocompleteContainer.contains(event.target)) {
+        document.getElementById('suggestionList').style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
