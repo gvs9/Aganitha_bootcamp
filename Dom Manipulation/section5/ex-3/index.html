@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark/Light Mode Switch</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+      margin: 0;
+      padding: 20px;
+    }
+
+    
+    body.dark-mode {
+      background-color: black;
+      color: #fff;
+    }
+
+    
+    .mode-switch {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      color:#f39c12;
+    }
+
+    .mode-switch-label {
+      margin-right: 10px;
+    }
+
+    .mode-switch input {
+      width: 40px;
+      height: 20px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .mode-switch input::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #ccc;
+      border-radius: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .mode-switch input:checked::before {
+      background-color: #f39c12; 
+    }
+
+    .mode-switch input:checked::after {
+      content: "\1F319"; 
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="mode-switch">
+    <label class="mode-switch-label" for="darkMode">Dark Mode:</label>
+    <input type="checkbox" id="darkMode" class="mode-switch-checkbox" onclick="toggleDarkMode()">
+  </div>
+
+  
+  <h1>Dark/Light </h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda officia, quasi eius similique nobis amet maiores alias quia quam, rerum magnam, impedit repellendus rem explicabo? Repudiandae alias sed repellat harum?</p>
+
+  <script>
+    
+    function toggleDarkMode() {
+      var body = document.body;
+      body.classList.toggle('dark-mode');
+    }
+  </script>
+
+</body>
+</html>

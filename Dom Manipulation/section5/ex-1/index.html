@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collapsible Content Sections</title>
+  <style>
+    
+    .collapsible-container {
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    
+    .collapsible-section-header {
+      background-color: #3498db;
+      color: #fff;
+      padding: 15px;
+      cursor: pointer;
+      border: none;
+      text-align: left;
+      outline: none;
+      width: 100%;
+      transition: background-color 0.3s;
+    }
+
+    
+    .collapsible-content {
+      display: none;
+      padding: 15px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-top: none;
+    }
+
+
+    .collapsible-section-header.active {
+      background-color: #2980b9;
+    }
+
+    
+    .collapsible-section-header::after {
+      content: '\02795'; 
+      font-size: 1.2em;
+      color: #fff;
+      float: right;
+      margin-left: 5px;
+    }
+
+    .collapsible-section-header.active::after {
+      content: '\02796'; 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="collapsible-container">
+    <button class="collapsible-section-header" onclick="toggleSection('section1')">Section 1</button>
+    <div id="section1" class="collapsible-content">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, inventore cupiditate corporis fuga repudiandae ea? Nesciunt corporis, dolores ipsum quasi veritatis numquam et at tenetur veniam necessitatibus, iusto, quos aperiam.</p>
+    </div>
+
+    <button class="collapsible-section-header" onclick="toggleSection('section2')">Section 2</button>
+    <div id="section2" class="collapsible-content">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, dolorem beatae corrupti quaerat magni delectus consequatur suscipit illo magnam impedit recusandae ducimus deserunt vero, excepturi tenetur? Adipisci tempore provident temporibus!</p>
+    </div>
+
+    <button class="collapsible-section-header" onclick="toggleSection('section3')">Section 3</button>
+    <div id="section3" class="collapsible-content">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, in! Vero explicabo blanditiis repudiandae tenetur tempore ut iusto voluptatibus ullam repellat consequatur, vitae minus ratione inventore. Voluptates tenetur in suscipit.</p>
+    </div>
+  </div>
+
+  <script>
+    
+    function toggleSection(sectionId) {
+      var section = document.getElementById(sectionId);
+      var header = section.previousElementSibling;
+
+      
+      header.classList.toggle('active');
+
+      
+      if (section.style.display === 'block') {
+        section.style.display = 'none';
+      } else {
+        section.style.display = 'block';
+      }
+    }
+  </script>
+
+</body>
+</html>

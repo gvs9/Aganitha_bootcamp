@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Image Gallery</title>
+  <style>
+    
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    
+    .thumbnail {
+      width: 100px;
+      height: 75px;
+      margin: 5px;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .thumbnail:hover {
+      transform: scale(1.2);
+    }
+
+    
+    .main-image {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="image-gallery" onclick="changeImage(event)">
+    <img src="gallery1.avif" alt="Thumbnail 1" class="thumbnail" data-src="gallery5.avif">
+    <img src="gallery2.avif" alt="Thumbnail 2" class="thumbnail" data-src="gallery4.avif">
+    
+    <img src="gallery3.avif" alt="Thumbnail 3" class="thumbnail" data-src="gallery6.avif">
+
+    <img src="gallery4.avif" alt="Main Image" class="main-image" id="mainImage">
+  </div>
+
+  <script>
+    
+    function changeImage(event) {
+      if (event.target.classList.contains('thumbnail')) {
+        var mainImage = document.getElementById('mainImage');
+        var newImageSrc = event.target.getAttribute('data-src');
+
+        mainImage.src = newImageSrc;
+      }
+    }
+  </script>
+
+</body>
+</html>
