@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Trials Data Explorer</title>
+    
+      <!-- Your custom JavaScript -->
+      <script src="index.js"></script>
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+             <!-- <img src="clinicaltriallogo.svg" alt="ClinicalTrials.com "> -->
+            <h1>Clinical Trial</h1> 
+        </div>
+        <div class="menu-icon">&#9776;</div>
+        <nav>
+            <ul>
+                <li><a href="#summary">About This Site</a></li>
+                <li><a href="#search-bar">Search Studies</a></li>
+                <li><a href="#data-table-container">Data About Studies</a></li>
+                <li><a href="#visualizations">Study Basics</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="cta">
+            <a href="#login" class="button">Login</a>
+        </div>
+    </header>
+
+    <div id="loadingIndicator" class="loading-spinner">
+        
+    </div>
+
+    <div class="container">
+        <!-- Summary Section -->
+        <div id="summary" class="section">
+            <h2>Clinical Trials is a place to learn about clinical studies from around the world.</h2>
+            <p>
+                Clinical trials are research studies that test how well new medical approaches work in people. Each study answers scientific questions and tries to find better ways to prevent, screen for, diagnose, or treat a disease. Clinical trials may also compare a new treatment to a treatment that is already available.
+            </p>
+            <p>
+                Every clinical trial has a protocol, or action plan, for conducting the trial. The plan describes what will be done in the study, how it will be conducted, and why each part of the study is necessary. Each study has its own rules about who can take part. Some studies need volunteers with a certain disease. Some need healthy people. Others want just men or just women.
+            </p>
+        </div>
+
+        <!-- Search Bar Section -->
+        <div id="search-bar" class="section">
+            <h2>Search Studies</h2>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Enter keywords...">
+                <button class="search-button" onclick="searchStudies()">Search</button>
+            </div>
+        </div>
+
+
+        <div class="sub-container">
+            <!-- Filter Section -->
+            <form id="filters" class="section">
+                <h2>Filter Your Search :</h2>
+                <label for="diseaseType">Disease Type:</label>
+                <select id="diseaseType"></select>
+    
+                <label for="trialPhase">Trial Phase:</label>
+                <select id="trialPhase"></select>
+
+                <label for="location">Location:</label>
+                <select id="location"></select>
+
+                <label for="status">Status:</label>
+                <select id="status"></select>
+
+                <label for="fundingSource">Funding Source:</label>
+                <select id="fundingSource"></select>
+    
+                <button type="submit">Apply Filters</button>
+            </form>
+
+
+ <!-- Trial Details Section  -->
+            <div id="trial-details" class="section">
+                <h2>Trial Details</h2>
+                <div id="trial-details-content" class="trial-details-content"> 
+                    <p>Trials are crucial processes in medical research designed to evaluate the safety and effectiveness of new treatments, interventions, or medical devices.</p>
+                        <p> These trials contribute significantly to advancements in healthcare, shaping the future of medicine.</p>
+                           <strong>Protocols:</strong> 
+                   <p>Every clinical trial follows a detailed plan known as a protocol.</p> 
+                    <p>This document outlines the study's objectives, methodology, participant eligibility criteria, and the plan for data collection and analysis.</p> 
+                    
+                    <h3>Trial Phases:</h3>
+                    <ul>
+                        <li>
+                            <strong>Phase I:</strong>
+                            <ul>
+                                <li>Objective: Assess safety.</li>
+                                <li>Focus: Determine the safety profile of the intervention in a small group of participants.</li>
+                                <li>Key: Investigate dosage, side effects, and how the body processes the treatment.</li>
+                            </ul>
+                        </li>
+                
+                        <li>
+                            <strong>Phase II:</strong>
+                            <ul>
+                                <li>Objective: Explore efficacy.</li>
+                                <li>Focus: Evaluate the effectiveness of the treatment in a larger group of participants.</li>
+                                <li>Key: Gather preliminary data on whether the intervention works for the intended purpose.</li>
+                            </ul>
+                        </li>
+                
+                        <li>
+                            <strong>Phase III:</strong>
+                            <ul>
+                                <li>Objective: Examine overall benefits and risks.</li>
+                                <li>Focus: Assess the treatment's effectiveness, monitor side effects, and compare it to standard.</li>
+                                <li>Key: Provide critical information for regulatory approval.</li>
+                            </ul>
+                        </li>
+                
+                        <li>
+                            <strong>Phase IV:</strong>
+                            <ul>
+                                <li>Objective: Post-marketing surveillance.</li>
+                                <li>Focus: Continued monitoring after the treatment is in the market.</li>
+                                <li>Key: Identify rare or long-term side effects and ensure ongoing safety.</li>
+                            </ul>
+                        </li>
+                    </ul>
+        
+                    
+                  </div>
+            </div>
+
+            
+
+            <!--  Visualizations Section -->
+            <div id="visualizations" class="section">
+                <h2>Data Visualizations</h2>
+                   <!-- Pie Chart Container -->
+        <div id="pie-chart-container" class="visualization-container">
+            <h2>Trials Across Different Phases.</h2>
+            <!-- <div id="pie-chart">Distribution of Clinical Trial</div> -->
+            <strong>Distribution of Clinical Trial</strong>
+            <!-- Additional information about the pie chart -->
+            <p>   
+                The distribution of clinical trials across different phases is a key aspect
+                of medical research. </p>
+                <p> Phase plays a distinct role in the development and
+                evaluation of new treatments.</p>
+                <p>The pie chart visually represents the proportion
+                of trials in each phase, offering insights into the progression of medical studies.
+            </p>
+          <a href="piechart.html">
+            <button type="submit">More Info</button>
+        </a>
+            
+        </div>
+
+        <!-- Bar Graph Container -->
+        <div id="bar-graph-container" class="visualization-container">
+            <h2>Trials Per Disease Type </h2>
+            <div id="bar-graph"></div>
+            <!-- Additional information about the bar graph -->
+            <p>Explore insights about the number of trial per disease type</p>
+            <p>   
+                The medical community engages in clinical trials across a wide spectrum of diseases,from common chronic condition </p>
+                <p>   This diversity reflects the commitment to addressing the healthcare needs of a broad population.</p>
+                <p>In-depth exploration of trials per disease type enables researchers and healthcare professionals to tailor treatment approaches.
+            </p>
+            <a href="stackedBarGraph.html">
+                <button type="submit">More Info</button>
+            </a>
+        </div>
+
+        <!-- Line Graph Container -->
+        <div id="line-graph-container" class="visualization-container">
+            <h2> Trends In Participant Demographics</h2>
+            <!-- <div id="line-graph">Line Graph Placeholder</div> -->
+            <!-- Additional information about the line graph -->
+            <p>Explore insights about the Participant Demographic.</p>
+            <p>   
+                
+                One of the primary goals of studying participant demographics in clinical trials is to ensure inclusivity and diversity. 
+            </p>
+                <p> Analyzing participant age is integral to understanding how medical interventions affect different generations.</p>
+                <p> Investigating participant demographics based on gender allows researchers to discern any variations in treatment efficacy 
+            </p>
+            <a href="lineGraph.html">
+                <button type="submit">More Info</button>
+            </a>
+        </div>
+            </div>
+
+           
+           
+
+            <!-- Data Table Section -->
+            <div id="data-table-container" class="section">
+                <h2>Display Data Of Trial Details </h2>
+                <p>   
+                    The distribution of clinical trials across different phases is a key aspect
+                    of medical research. </p>
+                    <p> Phase plays a distinct role in the development and
+                    evaluation of new treatments.</p>
+                    <p>The pie chart visually represents the proportion
+                    of trials in each phase, offering insights into the progression of medical studies.
+                </p>
+                <a href="datatable.html" >
+                 <button type="submit">More Info</button></a>
+            </div>
+           
+        </div> 
+    </div>
+
+
+
+
+    <footer id="contact-us">
+        <div class="footer-container">
+             <!-- Footer Content in Two Columns --> 
+            <div class="footer-columns">
+                <!-- First Column -->
+                <div class="footer-column">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">About ClinicalTrials.gov</a></li>
+                        <li><a href="#">Release Notes</a></li>
+                    </ul>
+    
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="#">Give us feedback</a></li>
+                        <li><a href="#">Glossary</a></li>
+                        <li><a href="#">Customer Support</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Second Column -->
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                    </ul>
+    
+                    <h3>ClinicalTrials.gov </h3>
+                    <p>National Library of Medicine<br>8600 Rockville Pike, Bethesda, MD 20894<br>Go to the classic website</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-container">
+            <!-- Second Container with Additional Content -->
+            <div class="footer-columns additional-content">
+                <!-- First Column -->
+                <div class="footer-column">
+                    <p><a href="#" target="_blank">NIH National Library of Medicine, National Center for Biotechnology Information (opens in a new tab)</a></p>
+                </div>
+             
+                <!-- Second Column -->
+                <div class="footer-column">
+                    <p><strong>ClinicalTrials.gov</strong></p>
+                    <p>An official website of the U.S. Department of Health and Human Services, National Institutes of Health, National Library of Medicine, and National Center for Biotechnology Information.</p>
+                </div>
+            </div>
+           
+        </div>
+
+        <div class="go-to-top">
+            <a href="#top" id="goToTopBtn">Go to Top</a>
+        </div>
+      
+    </footer>
+    
+    
+   
+
+  
+</body>
+</html>
