@@ -1,5 +1,4 @@
 
-
 document.addEventListener("DOMContentLoaded", async function () {
     const data = await fetchData();
     renderDataTable(data);
@@ -7,7 +6,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 async function fetchData() {
     try {
-        const response = await fetch( ''//" https://api.mockaroo.com/api/0e7fdda0?count=500&key=a425d070");
+        const response = await fetch( " https://api.mockaroo.com/api/0e7fdda0?count=500&key=a425d070"
        // "https://api.mockaroo.com/api/fcae83e0?count=500&key=734630c0" 
        );
         const data = await response.json();

@@ -1,12 +1,14 @@
 
 
 
+
+
 let mockData = [];
 
 // Simulate data fetching with loading indicators
 async function fetchData() {
-    const apiUrl ='' //'https://api.mockaroo.com/api/fcae83e0?count=500&key=734630c0';
-  //  const apiUrl = '  https://api.mockaroo.com/api/0e7fdda0?count=500&key=a425d070';
+   // const apiUrl = 'https://api.mockaroo.com/api/fcae83e0?count=500&key=734630c0';
+    const apiUrl = 'https://api.mockaroo.com/api/0e7fdda0?count=500&key=a425d070';
 
     try {
         const response = await fetch(apiUrl);
@@ -55,6 +57,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initiate data loading
     loadData();
 });
+
+// function toggleMenu() {
+//     var menuLinks = document.getElementById("menuLinks");
+//     if (menuLinks.style.display === "block") {
+//         menuLinks.style.display = "none";
+//     } else {
+//         menuLinks.style.display = "block";
+//     }
+// }
+
 
 // loadData();
 function searchStudies() {
@@ -208,6 +220,7 @@ function renderTrialDetails(trial) {
             element.forEach(key => {
                 const element = document.createElement('p');
                 element.textContent =  `${key}: ${section[key]}`;
+                 element.classList.add('filter-key'); 
                 sectionElement.appendChild(element);
             });
     
@@ -279,7 +292,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Attach click event listeners to the links
     pieChartContainer.querySelector('a').addEventListener('click', function (event) {
         event.preventDefault(); // Prevent the default behavior of the link
-        window.location.href = 'piechart.html'; // Redirect to the pie chart page
+        window.location.href = 'pieChart.html'; // Redirect to the pie chart page
     });
 
     barGraphContainer.querySelector('a').addEventListener('click', function (event) {
@@ -289,7 +302,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     lineGraphContainer.querySelector('a').addEventListener('click', function (event) {
         event.preventDefault();
-        window.location.href = 'linegraph.html';
+        window.location.href = 'lineGraph.html';
     });
 });
 // index.js
@@ -301,6 +314,21 @@ document.addEventListener("DOMContentLoaded", function () {
     // Attach a click event listener to the data table link
     dataTableContainer.querySelector('a').addEventListener('click', function (event) {
         event.preventDefault(); // Prevent the default behavior of the link
-        window.location.href = 'datatable.html'; // Redirect to the data table page
+        window.location.href = 'dataTable.html'; // Redirect to the data table page
     });
+});
+// function toggleMenu() {
+//     var menuLinks = document.getElementById("menuLinks");
+//     menuLinks.classList.toggle("menulinks");
+//     console.log('opening',menuLinks); // Toggle the "show-menu" class
+// }
+
+// document.getElementById('menu-icon').addEventListener('click', function () {
+//     var nav = document.querySelector('nav');
+//     nav.classList.toggle('show-menu');
+// });
+
+document.getElementById('navToggle').addEventListener('click', function () {
+    var nav = document.querySelector('nav');
+    nav.style.display = (nav.style.display === 'none' || nav.style.display === '') ? 'block' : 'none';
 });
