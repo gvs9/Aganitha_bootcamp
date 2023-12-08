@@ -1,4 +1,4 @@
-# New-Project
+ Develop a sophisticated web application for exploring and analyzing clinical trial data. Emphasis on user interaction, diverse data visualizations, and comprehensive insights using a rich mock dataset.
 
 Summary:
 
